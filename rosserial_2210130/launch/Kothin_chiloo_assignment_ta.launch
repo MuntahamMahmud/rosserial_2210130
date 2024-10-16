@@ -1,0 +1,18 @@
+<launch>
+    
+    <node pkg="rosserial_python" type="serial_node.py" name="rosserial_driver" >
+        <param name="port" value="/dev/ttyUSB0" />
+        <param name="baud" value="115200" /> 
+    </node>
+
+  
+    <node pkg="rosserial_python" type="serial_node.py" name="rosserial_sensor" >
+        <param name="port" value="/dev/ttyUSB1" />
+        <param name="baud" value="115200" />
+    </node>
+
+ 
+    <node pkg="rosserial_2210130" type="middle_player.py" name="Dalal"  output="screen">
+      
+    </node>
+</launch>
